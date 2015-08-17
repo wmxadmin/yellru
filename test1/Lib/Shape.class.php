@@ -9,12 +9,14 @@ abstract class Shape
     public $line = 'bold';
     
     public function __construct($params) {
+        $this->setColor($params['color']);
+        $this->setLine($params['line']);
     }
     
-    public final function setColor($params) { 
-        $this->color=$params['color'];
+    public final function setColor($color) { 
+        $this->color=$color;
     }
-    public final function setLine($params) { 
-        $this->line=$params['line'];
+    public final function setLine($line) { 
+        $this->line=$line;
     }
 }
